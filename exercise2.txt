@@ -1,0 +1,5 @@
+select `PAGE` as `Home_Page` from table sum(Home_Page) as counts;
+union
+select `PAGE` as `Product_Page` from table sum(Product_Page) as counts;
+union
+select `PAGE` as `Warranty_Page` from table sum(Warranty_Page) as counts;
