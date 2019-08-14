@@ -9,7 +9,11 @@ public class Money{
 		if (num < 0)
 		{
 			System.out.println("everything is 0");
-			return null;
+			//null pointer:
+			for (int i = 0; i < 4; i++)
+				reg.add(0);
+
+			return reg;
 		}
 		if (num >= 25)
 		{
@@ -43,7 +47,7 @@ public class Money{
 	public static void main(String args[])
 	{
 		Money m = new Money();
-		ArrayList<Integer> s = m.change(83);
+		ArrayList<Integer> s = m.change(-1);
 		System.out.println("quarters: "+ s.get(0));
 		System.out.println("dimes: "+ s.get(1));
 		System.out.println("nickels: "+ s.get(2));
